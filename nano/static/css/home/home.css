@@ -101,15 +101,19 @@ body.dark-mode {
 .hero {
   text-align: center;
   padding: 50px 20px;
-  background: linear-gradient(135deg, #007bff, #0056b3);
+  /* background: linear-gradient(135deg, #2e2e2e, #525252); */
   color: white;
 }
 
 .hero-content {
   max-width: 600px;
   margin: 0 auto;
+  color: #000;
 }
 
+.dark-mode .hero-content {
+  color: #ffffff;
+}
 .hero h2 {
   font-size: 28px;
   margin-bottom: 10px;
@@ -121,8 +125,8 @@ body.dark-mode {
 }
 
 .btn {
-  background: white;
-  color: #007bff;
+  background: rgb(42, 42, 42);
+  color: #ffffff;
   padding: 10px 15px;
   border-radius: 5px;
   text-decoration: none;

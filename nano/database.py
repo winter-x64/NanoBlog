@@ -1,15 +1,15 @@
 import os
 
+from dotenv import load_dotenv
 from supabase import Client, create_client
+
+load_dotenv()
 
 # Supabase configuration
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 
 # Create Supabase client
-supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
-
-
-# Dependency to get the Supabase client
-def get_db():
-    return supabase
+supabase_client: Client = create_client(
+    supabase_url=SUPABASE_URL, supabase_key=SUPABASE_KEY
+)

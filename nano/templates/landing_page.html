@@ -32,26 +32,14 @@
     <!-- Main Content -->
     <main class="container">
       <section class="content">
+        <!--  -->
+        {% for post in featured_posts %}
         <div class="blog-post">
-          <!-- <img src="https://source.unsplash.com/600x400/?tech" alt="Blog Image"> -->
-          <h2><a href="#">How to Build a Blog</a></h2>
-          <p>
-            Learn how to create a minimalist blog using HTML, CSS, and
-            JavaScript.
-          </p>
+          <h2><a href="#"> {{ post["title"] }} </a></h2>
+          <p>{{ post["description"] }}</p>
         </div>
 
-        <div class="blog-post">
-          <!-- <img src="https://source.unsplash.com/600x400/?design" alt="Blog Image"> -->
-          <h2><a href="#">The Power of Minimalism</a></h2>
-          <p>Why simple UI/UX makes your application better.</p>
-        </div>
-
-        <div class="blog-post">
-          <!-- <img src="https://source.unsplash.com/600x400/?coding" alt="Blog Image"> -->
-          <h2><a href="#">CSS Tips for Clean UI</a></h2>
-          <p>Learn how to use CSS to create modern, minimalist designs.</p>
-        </div>
+        {% endfor %}
       </section>
 
       <!-- Sidebar -->
